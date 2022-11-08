@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+	<head>
+		<title>Contact - Game Company</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Oppimistehtävä 6">
+		<meta name="keywords" content="koulutehtävä, pelisivusto, game company, pelifirma">
+		<meta name="author" content="Klaus Ovaskainen">
+		<link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</head>
+	<body>
+	
+		<header>
+			<div class="container">
+				<div id="logo">
+					<h1><span class="highlight">Salmon</span>Snake</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="./">Home</a></li>
+						<li class="dropdown">
+							<a href="./games" class="dropbtn">Games<i class="down"></i></a>
+							<div class="dropdown-content">
+								<a href="#">Game 1</a>
+								<a href="#">Game 2</a>
+								<a href="#">Game 3</a>
+							</div>
+						</li>
+						<li><a href="./team">Team</a></li>
+						<li><a href="./news">News</a></li>
+						<li><a href="./careers">Careers</a></li>
+						<li class="current"><a href="./contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="showcase">
+				<img src="images/Badlands3.png">
+		</section>
+		
+		<section class="mission">
+			<div class="container">
+				<h1>Contact Form</h1>
+				<p>Aenean ligula orci, venenatis sit amet lacus a, varius iaculis ligula. Proin eget vehicula ligula, non molestie dolor.
+				Fusce fermentum at risus gravida facilisis. Praesent facilisis enim nisi. Aenean ullamcorper mi id pharetra posuere.
+				Aliquam id egestas mauris. Sed tristique lorem nec velit suscipit, ut malesuada magna vehicula. Cras urna lacus, aliquet et mattis nec, consequat luctus nisl.
+				Ut volutpat vestibulum risus eu fermentum. Pellentesque eu sollicitudin nisi. Aliquam convallis placerat lorem ac tempus.
+				Sed sed nisi erat. Cras tincidunt neque in tempus iaculis. Praesent non pretium leo. Duis finibus luctus rhoncus.
+				</p>
+			</div>
+		</section>
+		
+		<section id="contact">	
+			  <form action="/action_page.php">
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+				
+				<label for="email">Email Address</label>
+				<input type="text" id="email" name="email" placeholder="email..">
+				
+				<label for="subject">Subject</label>
+				<input type="text" id="subject" name="subject" placeholder="Subject..">
+
+				<label for="subject">Message</label>
+				<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+				<input type="submit" value="Submit">
+			  </form>
+		</section>
+			
+		<section id="mapWrapper">
+			<div id="mapText">
+				<p>SalmonSnake</p>
+				<p>Mikäliekatu 12 A</p>
+				<p>48100 Kotka</p>
+				<p>Finland</p>
+				<br>
+				<p>info@salmonsnake.com</p>
+				<p>press@salmonsnake.com</p>
+				<p>+358 44 1234 567</p>
+			</div>
+			<div id="googleMap"></div>
+		</section>
+		
+		<footer>
+			<div id="footerText">
+				<p>Copyright &copy; Klaus Ovaskainen | 2018</p>
+			</div>
+			<div class="socialMedia">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+			<div id="footerLinks">
+				<a href="#">CONTACT US</a>
+				<a href="#">PRIVACY POLICY</a>
+				<a href="#">TERMS OF SERVICE</a>
+				<a href="#">FAN CONTENT POLICY</a>
+			</div>
+		</footer>
+		
+	<!-- Google Maps -->
+	<script>
+	function myMap() {
+	var mapProp= {
+		center:new google.maps.LatLng(60.481909,26.907660),
+		zoom:10,
+	};
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrWJzs9gTp-t8JDbmahhbqwdhPU1g51iQ&callback=myMap"></script>
+			
+	</body>
+</html>

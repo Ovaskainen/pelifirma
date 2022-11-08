@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="fi">
+	<head>
+		<title>Careers - Game Company</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="Oppimistehtävä 6">
+		<meta name="keywords" content="koulutehtävä, pelisivusto, game company, pelifirma">
+		<meta name="author" content="Klaus Ovaskainen">
+		<link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</head>
+	<body>
+	
+		<header>
+			<div class="container">
+				<div id="logo">
+					<h1><span class="highlight">Salmon</span>Snake</h1>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="./">Home</a></li>
+						<li class="dropdown">
+							<a href="./games" class="dropbtn">Games<i class="down"></i></a>
+							<div class="dropdown-content">
+								<a href="#">Game 1</a>
+								<a href="#">Game 2</a>
+								<a href="#">Game 3</a>
+							</div>
+						</li>
+						<li><a href="./team">Team</a></li>
+						<li><a href="./news">News</a></li>
+						<li class="current"><a href="./careers">Careers</a></li>
+						<li><a href="./contact">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="showcase">
+			<img src="images/Badlands2.png">
+		</section>
+		
+		<div class="careersText">
+			<h1 class="h1Text">WORK WITH US?</h1>
+			<p>We still have lots of work ahead of us and that is why we are looking to bring additions to our current team.
+			People who are as hungry as us to create their best work yet. You reckon that’s you?</p>
+			<p>While you’re here, take a moment to read a few tips on how to land a job at SalmonSnake.</p>
+			
+			<button class="collapsible">An Open Application</button>
+			<div class="content">
+				<div id="contentBox">
+					<h2>WHY JOIN SALMONSNAKE?</h2>
+					<p id="p1">Mauris imperdiet vitae neque non porta. Etiam laoreet, risus quis tempor tincidunt, libero sem dapibus mi,
+					quis tincidunt odio purus non ipsum. Pellentesque a lacus nec mi porttitor convallis non sed leo.
+					Morbi interdum sapien ut ultricies vestibulum.</p>
+					<p>Duis sit amet maximus nunc. Nullam elementum odio dui, vel mattis sapien pretium in. Proin vitae semper tortor.
+					Nulla ut dapibus quam. Phasellus a viverra lectus. Sed ex tortor, semper non bibendum id, blandit at sapien.
+					Phasellus egestas arcu sem, non blandit purus vehicula non. Donec posuere vel tellus at finibus.</p>
+					<p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					
+					<h2>SALMONSNAKE OFFER YOU</h2>
+					<ul>
+					  <li>Full-time position in a stable company</li>
+					  <li>An important role part of a self-organising team</li>
+					  <li>Flexible working hours and possibility to work remotely weekly</li>
+					   <li>Competitive salary with stock options</li>
+					  <li>Unlimited vacation policy</li>
+					  <li>Awesome studio in the city centre of Tampere</li>
+					   <li>Choose your phone and computer</li>
+					  <li>Coffee and snacks</li>
+					  <li>Finnish welfare and healthcare benefits</li>
+					   <li>Freezer full of ice cream and weekly board game nights!</li>
+					</ul>
+					<div id="applyButton">
+						<a href="default.asp" target="_blank">Apply here</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+				
+		<footer>
+			<div id="footerText">
+				<p>Copyright &copy; Klaus Ovaskainen | 2018</p>
+			</div>
+			<div class="socialMedia">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+			<div id="footerLinks">
+				<a href="#">CONTACT US</a>
+				<a href="#">PRIVACY POLICY</a>
+				<a href="#">TERMS OF SERVICE</a>
+				<a href="#">FAN CONTENT POLICY</a>
+			</div>
+		</footer>
+		
+		<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+		</script>	
+	</body>
+</html>

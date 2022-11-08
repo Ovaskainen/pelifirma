@@ -1,0 +1,966 @@
+
+
+/* GLOBAL */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+	background-color: #FEFFFF;
+}
+
+/* Logon Fontti */
+@font-face {
+   font-family: omafontti;
+   src: url("../fonts/Knights Quest.ttf")
+}
+
+@font-face {
+   font-family: omafontti2;
+   src: url("../fonts/Knights Quest Callig.ttf")
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fontti {
+    from {font-family: omafontti2;}
+    to {font-family: omafontti;}
+}
+
+/* Standard syntax */
+@keyframes fontti {
+    from {font-family: omafontti2;}
+    to {font-family: omafontti;}
+}
+
+* {box-sizing:border-box}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;	
+}
+
+/* Showcase -> Headerin alapuoliset kuvat */
+#showcase {
+	height: 500px;
+	width: 100%;
+	margin: auto;
+	position: relative;	
+}
+
+#showcase img {
+	width: 100%;
+	height: 500px;
+	border-bottom: 2px solid #F39143;
+	box-shadow: 10px 10px 5px grey;
+}
+
+/* palstoitus */
+.newsletter {
+	-webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+	margin: auto;
+	width: 80%;
+	padding-top: 15px;
+	padding-bottom: 45px;
+	font-size: 1.3em;
+}
+
+
+/* HEADER */
+header {
+	background: #17252A;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 90px;
+	border-bottom: 2px solid #F39143;
+}
+
+header ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #17252A;
+}
+
+header li {
+	float: left;
+}
+
+header a, .dropbtn {
+	display: inline-block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li a:hover, .dropdown:hover .dropbtn {
+	background-color: #e8491d;
+}
+
+header li.dropdown {
+	display: inline-block;
+}
+
+header .dropdown-content {
+    display: none;
+    position: absolute;
+    background:#17252A;
+    min-width: 180px;
+    z-index: 1;
+}
+
+header .dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+header .dropdown-content a:hover {
+	background-color: #e8491d;
+}
+
+header .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+header #logo {
+	float: left;
+}
+
+header #logo h1 {
+	margin: 0;
+	line-height: 1em;
+	font-size: 3em;
+	font-family: omafontti;
+	animation: logoAnim 2s;
+
+}
+
+@keyframes logoAnim {
+	0% {left:-1200px; top:0px;}
+	100% {left:0px; top:0px;}
+}
+
+header nav {
+	float: right;
+}
+
+header .current {
+	background-color: #e8491d;
+}
+
+/* Games valikon nuoli */
+i {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;  
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.down {
+    transform: rotate(45deg);   
+    -webkit-transform: rotate(45deg);
+}
+
+
+/* HOME PAGE */
+/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	position: relative;
+	margin: auto;
+}
+
+.slideshow-container img {
+	width: 100%;
+	height: 500px;	
+	border-bottom: 2px solid #F39143;
+	box-shadow: 10px 10px 5px grey;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 26px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(220,120,120,120);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+	text-align: center;
+	position: absolute;
+	left: 48%;
+	bottom: 10px;	
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+
+/* Mission laatikko */
+.mission {
+	margin: 15px 0 15px 0;
+	padding: 25px;
+	color: #ffffff;
+	background: #17252A;	
+	box-shadow: 10px 10px 5px grey;
+}
+
+/* Subscribe laatikko */
+.subscribe {
+	margin: 20px 0 20px 0;
+	padding: 25px;
+	color: #ffffff;
+	background: #91243D;
+	box-shadow: 10px 10px 5px grey;
+}
+
+.mission h1, .subscribe h1 {
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.subscribe p {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.subscribe input[type=text] {
+    width: 30%;
+	display: block;
+	margin: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+	background-color: #91243D;
+    border-bottom: 2px solid #ffffff;
+	outline: none;
+	font-size: 1.2em;
+}
+
+.subscribe input[type=submit] {
+    color: #ffffff;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3em;
+    margin: 35px auto 45px auto;
+    cursor: pointer;	
+	background-color: #91243D;
+	border: 4px solid #ffffff;
+	border-radius: 6px;
+}
+
+
+/* GAMES PAGE */
+/* Games page tekstiosuudet */
+.gamesText {
+	margin: 20px auto 20px auto;
+	max-width: 1000px;
+	color: black;
+	font-size: 1.2em;
+	text-align: center;
+	background: #ffffff;
+}
+
+.gamesText .h1Text {
+	text-align: center;
+	font-size: 1.5em;
+	color: #black;
+}
+
+/* App Store & Google Play Buttons */
+.downloadButton img {
+	width: 205px;
+	height: 61px;
+	margin: 20px 40px 20px 40px;
+}
+
+/*Youtube videon asettelut */
+.videoContainer {
+	max-width: 1000px;
+	margin: 30px auto 30px auto;
+}
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+
+}
+
+.video iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	width: 50%;
+	margin:  200px auto 200px auto;
+	border: 4px solid red;
+
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* TEAM PAGE */
+/* Team page tekstiosuudet */
+.teamGalleryText {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px 15% 15px 15%;
+	color: #ffffff;
+	font-size: 1.2em;
+	text-align: center;
+	background: #96253E;
+	min-height: 300px;
+	box-shadow: 10px 10px 5px grey;
+}
+
+.teamGalleryText .h1Text {
+	text-align: center;
+	font-size: 1.5em;
+	color: #ffffff;
+}
+
+/* Kuvagalleria */
+#teamGallery {
+	width: 100%;
+	min-height:300px;
+	background-color: #17252A;	
+	margin-bottom: 20px;
+	box-shadow: 10px 10px 5px grey;
+}
+
+#teamGallery #wrapper {
+	overflow: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 20px;
+	min-height: 300px;
+}
+
+#teamGallery #galleryWrapper {
+	min-height: 200px;
+	overflow: auto;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	width: 1170px;
+}
+	
+#teamGallery .gallery {	
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 30px;
+	width: 240px;
+	float: left;	
+}
+
+#teamGallery .gallery img {
+	width: 240px;
+	height: 240px;
+	border: 4px solid #FFFFFF;
+}
+
+#teamGallery .desc {
+	margin-top: 4px;
+	text-align: center;
+	color: white;
+	font-size: 1.2em;
+}
+
+
+/* NEWS PAGE */
+.row {
+	color: #ffffff;
+	margin: 0;
+}
+
+/* Left column */
+.row .leftcolumn {   
+    float: left;
+    width: 70%;
+	padding: 0px 50px 0px 50px;
+}
+
+/* Right column */
+.row .rightcolumn {
+    float: left;
+    width: 30%;
+	padding: 0px 50px 0px 0;
+	text-align: center;
+}
+
+.row .rightcolumn input[type=text]{
+    width: 80%;
+	display: block;
+	margin: auto;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+	background-color: #17252A;
+    border-bottom: 2px solid #ffffff;
+	outline: none;
+	font-size: 1.2em;
+	color: #ffffff;
+}
+
+.row .rightcolumn input[type=submit] {
+    color: #ffffff;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3em;
+    margin: 35px auto 20px auto;
+    cursor: pointer;	
+	background-color: #17252A;
+	border: 3px solid #ffffff;
+	border-radius: 4px;
+}
+
+/* Jottei autofill värjää omituisen väriseksi input aluetta */
+.row input:-webkit-autofill {
+	-webkit-text-fill-color: #ffffff;
+    -webkit-box-shadow: 0 0 0px 1000px #17252A inset;
+} 
+
+/* image */
+.row .newsImg {
+    width: 100%;
+	height: 240px;
+}
+
+.row .newsImg img {
+	width: 100%;
+	height: 240px;
+}
+
+/* Add a card effect for articles */
+.row .card {
+     background-color: #17252A;
+     padding: 20px;
+     margin-top: 20px;
+	 margin-bottom: 20px;	 
+	 box-shadow: 10px 10px 5px grey;
+}
+
+.row .card h2 {
+	text-transform: uppercase;
+}
+
+/* Checkboxes */
+.row .card .container {
+	display: block;
+    position: relative;
+    padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.3em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.row .card .archiveLinks {
+	font-size: 1.3em;
+}
+
+.row .card .archiveLinks a {
+	display: block;
+	padding: 10px 0 10px 0;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.row .card .archiveLinks a:hover {
+	color: #e8491d;
+}
+
+/* Hide the browser's default checkbox */
+.row .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.row .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.row .container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a orange background */
+.row .container input:checked ~ .checkmark {
+    background-color: #e8491d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.row .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.row .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.row .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Read More links */
+.row .readMore {
+	padding-top: 15px;
+	font-size: 1.3em;
+}
+
+.row .readMore a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+/* CAREERS PAGE */
+/* Careers page tekstiosuudet */
+.careersText {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px 0 0 0;
+	color: #ffffff;
+	font-size: 1.2em;
+	text-align: center;
+	background: #17252A;
+	min-height: 300px;	
+	box-shadow: 10px 10px 5px grey;
+}
+
+.careersText .h1Text {
+	text-align: center;
+	font-size: 1.5em;
+	color: #ffffff;
+}
+
+/* An Open Application Button */
+.collapsible {
+  background-color: #1F3E7C;
+  color: white;
+  cursor: pointer;
+  padding: 24px;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+}
+
+.active, .collapsible:hover {
+  background-color: #f44336;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+/* Open Application sisältö */
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: auto;
+  transition: max-height 0.2s ease-out;
+  background-color: #17252A;
+  text-align: left;
+  margin-top: 35px;
+}
+
+.content h2 {
+	text-align: center;
+}
+
+.content #p1 {
+	font-weight: bold;
+	color: #e8491d;
+}
+
+/* Open Application sisältölaatikko */
+#contentBox {
+	background-color: #FEFFFF;
+	margin: 0 auto 35px auto;
+	padding: 15px;
+	max-width: 1000px;
+	height: 850px;
+	overflow: auto;
+	color: black;
+	border-radius: 16px;
+}
+
+/* An Open Application Button */
+#applyButton a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+	border-radius: 8px;
+	font-size: 1.2em;
+	margin: auto;
+}
+
+
+/* CONTACT PAGE */
+/* Form */
+#contact {
+    padding: 20px;
+}
+
+/* Formin asetukset */
+#contact input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 15px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contact label {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+#contact #fname {
+	width: 50%;
+	display: block;
+}
+
+#contact #lname {
+	width: 50%;
+	display: block;
+}
+
+#contact #email {
+	width: 50%;
+	display: block;
+}
+
+#contact #subject {
+	width: 50%;
+	display: block;
+}
+
+#contact #message {
+	width: 50%;
+	display: block;
+	font-size: 1.2em;
+}
+
+/* Jottei autofill värjää omituisen väriseksi input aluetta */
+#contact input:-webkit-autofill {
+	-webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px #FEFFFF inset;
+} 
+
+/* Submit button */
+#contact input[type=submit] {
+    background-color: #91243d;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+	width: 185px;
+	display: block;
+	margin-left: 25%;
+}
+
+#contact input[type=submit]:hover {
+    background-color: #e8491d;
+}
+
+/* Google Map asetukset*/
+#mapWrapper {
+	width: 100%;
+	height: 400px;
+	background: #17252A;
+	border-top: 2px solid #F39143;
+	border-bottom: 2px solid #F39143;
+	color: #ffffff;	
+	margin: 30px 0 0 0;
+}
+
+#mapText {
+	float: left;
+	width: 40%;
+	height: 396px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 1.1em;
+}
+
+#googleMap {
+	width: 50%;
+	height: 396px;
+	float: right;
+}
+
+
+/* FOOTER */
+footer {
+	padding: 10px;
+	padding-top: 50px;
+	color: #ffffff;
+	background-color: #1F3E7C;
+	min-height: 100px;
+	
+	box-shadow: 10px 10px 5px grey;
+}
+
+footer #footerText {
+	float: left;
+	width: 50%;
+	text-align: right;
+	padding-right: 60px;
+}
+
+footer .socialMedia {
+	width: 50%;
+	float: left;
+	text-align: left;
+	padding-left: 60px;
+}
+
+footer .socialMedia a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  background: #2c3e50;
+  color: white;
+  margin: 0 6px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 22px;
+}
+
+footer .socialMedia a:hover {
+  background: #e67e22;
+}
+
+footer .socialMedia a i {
+  transition: 0.4s all;
+}
+
+footer .socialMedia a:hover > i {
+  transform: scale(1.6) rotate(25deg);
+}
+
+footer #footerLinks {
+	display: inline-block;
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+footer #footerLinks a {
+	color: #ffffff;
+	font-size: 1.2em;
+	text-decoration: none;	
+	padding: 14px 16px;
+}
+
+
+/* RESPONSIVE LAYOUT */
+@media(max-width: 1200px) {
+#teamGallery #galleryWrapper {
+	width: 885px;
+}
+
+@media(max-width: 800px) {
+	header #logo,
+	header nav,
+	header nav li
+	#newsletter h1,
+	#newsletter form,
+	.leftcolumn,
+	.rightcolumn,
+	#mapText,
+	#googleMap,
+	.row .leftcolumn,
+	.row .rightcolumn
+	{
+		float: none;
+		text-align: center; 
+		width: 100%;
+		padding: 0;
+	}
+	
+	#teamGallery #galleryWrapper {
+	width: 590px;
+	}
+	
+	#contentBox {
+	height: 1300px;
+	}
+	
+	#mapWrapper {
+		height: 836px;
+	}
+	
+	header {
+		padding:bottom: 20px;
+	}
+	
+	#showcase h1 {
+		margin-top: 40px;
+	}
+	
+	#newsletter button, .quote button {
+		display: block;
+		width: 100%;
+	}
+	
+	#newsletter form input[type="email"], .quote input, .quote textarea {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+
+@media(max-width: 570px) {
+#teamGallery #galleryWrapper {
+	width: 300px;
+}
+
+
