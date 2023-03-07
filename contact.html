@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <!--=============== FONT AWESOME CDN LINK ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!--=============== CUSTOM CSS FILE LINK ===============-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--=============== MAP JS FILE ===============-->
+    <script src="js/map.js"></script>
+  </head>
+
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-dragon"></i> SalmonSnake</a
+      >
+
+      <nav class="navbar">
+        <div id="close-navbar" class="fas fa-times"></div>
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="games.html">games</a>
+        <a href="contact.html">contact</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+      </div>
+    </header>
+
+    <!--=============== CONTACT ===============-->
+    <section class="heading-link">
+      <h3>contact us</h3>
+      <p><a href="index.html">home</a> / contact</p>
+    </section>
+
+    <section class="contact">
+      <div class="row">
+        <div class="image">
+          <img src="images/email2.jpg" alt="" />
+        </div>
+
+        <form action="">
+          <h3>send us a message</h3>
+          <input type="text" placeholder="name" class="box" />
+          <input type="email" placeholder="email" class="box" />
+          <input type="number" placeholder="phone" class="box" />
+          <textarea
+            name=""
+            class="box"
+            placeholder="message"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="submit" value="send message" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <!--=============== MATERIAL FOR MEDIA & PRESS ===============-->
+    <section class="material">
+      <div class="content">
+        <div class="box-container">
+          <div class="box">
+            <h2>MATERIAL FOR MEDIA & PRESS</h2>
+            <p>
+              Vivamus lectus metus, dignissim vel tincidunt eu, placerat vitae
+              tortor. Praesent a mattis libero, acornare sapien. Sed tincidunt
+              arcu nisl, eu maximus magna.
+            </p>
+
+            <button class="btn">Download Press Kit</button>
+          </div>
+          <div class="box">
+            <h2>MEDIA CONTACT</h2>
+            <p>press@salmonsnake.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--=============== GOOGLE MAP ===============-->
+    <section id="mapWrapper">
+      <div id="googleMap"></div>
+    </section>
+
+    <!--=============== FOOTER ===============-->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3><i class="fa-solid fa-dragon"></i> SalmonSnake</h3>
+          <p>SalmonSnake</p>
+          <p>Keskuskatu 2 A</p>
+          <p>48200 Kotka</p>
+          <p>Finland</p>
+        </div>
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest upadates</p>
+          <form action="">
+            <input
+              type="email"
+              name=""
+              placeholder="enter your email"
+              id=""
+              class="email"
+            />
+            <input type="submit" value="subscribe" class="btn" />
+          </form>
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+      </div>
+    </section>
+
+    <!--=============== GOOGLE MAPS ===============-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrWJzs9gTp-t8JDbmahhbqwdhPU1g51iQ&callback=myMap"></script>
+
+    <!--=============== FONT AWESOME ===============-->
+    <script
+      src="https://kit.fontawesome.com/234ec284b9.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--=============== CUSTOM JS FILE ===============-->
+    <script src="js/script.js"></script>
+  </body>
+</html>
